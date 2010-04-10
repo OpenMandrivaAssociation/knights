@@ -3,7 +3,7 @@ Name:		knights
 Version:	2.0
 Release:	%mkrel 1
 Source0:	http://kde-apps.org/CONTENT/content-files/122046-%{name}-%{version}-src.tar.gz
-Group:		Graphical desktop/KDE
+Group:		Games/Boards
 License:	GPL
 URL:		http://kde-apps.org/content/show.php/Knights?content=122046
 BuildRoot:	%{_tmppath}/%{name}-root
