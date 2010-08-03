@@ -1,8 +1,10 @@
+%define srcname Knights
+
 Summary:	A simple chess board game for KDE4
 Name:		knights
-Version:	2.0
+Version:	2.0.1
 Release:	%mkrel 1
-Source0:	http://kde-apps.org/CONTENT/content-files/122046-%{name}-%{version}-src.tar.gz
+Source0:	http://kde-apps.org/CONTENT/content-files/122046-%{srcname}-%{version}-src.tar.gz
 Group:		Games/Boards
 License:	GPL
 URL:		http://kde-apps.org/content/show.php/Knights?content=122046
@@ -26,7 +28,7 @@ some nice animations.
 %{_iconsdir}/hicolor/*/apps/*
 
 %prep
-%setup -q -n Knights
+%setup -q -c %{name}
 
 %build
 %cmake_kde4
