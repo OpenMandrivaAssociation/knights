@@ -2,9 +2,9 @@
 
 Summary:	A simple chess board game for KDE4
 Name:		knights
-Version:	2.0.1
+Version:	2.2.0
 Release:	%mkrel 1
-Source0:	http://kde-apps.org/CONTENT/content-files/122046-%{srcname}-%{version}-src.tar.gz
+Source0:	http://dl.dropbox.com/u/2888238/Knights/%{name}-%{version}.tar.bz2
 Group:		Games/Boards
 License:	GPL
 URL:		http://kde-apps.org/content/show.php/Knights?content=122046
@@ -19,16 +19,17 @@ play against computer engines that support the XBoard protocol (like GnuChess)
 or against a player at the same computer. It has automatic rule checking and
 some nice animations.
 
-%files
+%files -f %name.lang
 %defattr(-,root,root)
-%{_bindir}/%{name}
+%{_kde_bindir}/%{name}
 %{_kde_applicationsdir}/%{name}.desktop
 %{_kde_appsdir}/%{name}
 %{_kde_datadir}/config.kcfg/%{name}.kcfg
-%{_iconsdir}/hicolor/*/apps/*
+%{_kde_configdir}/knights.knsrc
+%{_kde_iconsdir}/hicolor/*/apps/*
 
 %prep
-%setup -q -c %{name}
+%setup -qn %{name}-%{version}
 
 %build
 %cmake_kde4
@@ -38,8 +39,7 @@ some nice animations.
 rm -rf %{buildroot}
 %makeinstall_std -C build
 
-# fix permissions in the -debug package
-chmod 644 build/src/*.h
+%find_lang %name --with-html
 
 %clean
 rm -rf %{buildroot}
