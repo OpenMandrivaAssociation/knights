@@ -2,7 +2,7 @@
 
 Summary:	A simple chess board game for KDE4
 Name:		knights
-Version:	2.2.0
+Version:	2.3.0
 Release:	%mkrel 1
 Source0:	http://dl.dropbox.com/u/2888238/Knights/%{name}-%{version}.tar.bz2
 Group:		Games/Boards
