@@ -1,7 +1,7 @@
 Summary:	A simple chess board game for KDE4
 Name:		knights
 Version:	2.5.0
-Release:	1
+Release:	2
 Group:		Games/Boards
 License:	GPL
 URL:		http://kde-apps.org/content/show.php/Knights?content=122046
