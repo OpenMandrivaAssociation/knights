@@ -13,6 +13,30 @@ Source0:        https://invent.kde.org/games/%{name}/-/archive/master/%{name}-ma
 Source0:        https://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 %endif
 Requires:	gnuchess
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Qt5)
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Concurrent)
+BuildRequires:	cmake(Qt5Gui)
+BuildRequires:	cmake(Qt5QmlModels)
+BuildRequires:	cmake(Qt5Qml)
+BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5Quick)
+BuildRequires:	cmake(Qt5TextToSpeech)
+BuildRequires:	cmake(Qt5Svg)
+BuildRequires:	cmake(KF5DBusAddons)
+BuildRequires:	cmake(KF5Crash)
+BuildRequires:	cmake(KF5TextWidgets)
+BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5Plotting)
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5Wallet)
+BuildRequires:	cmake(KF5Plasma)
+BuildRequires:	cmake(KF5KDEGames)
+BuildRequires:	cmake(Freetype)
+BuildRequires:	cmake(Fontconfig)
+BuildRequires:	ninja
 
 %description
 Knights is KDE's chess frontend.
