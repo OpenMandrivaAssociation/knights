@@ -3,7 +3,7 @@
 Summary:	Chess game
 Name:		knights
 Version:	23.08.4
-Release:	1
+Release:	2
 Group:		Games/Boards
 License:	GPL
 URL:		https://invent.kde.org/games/knights
