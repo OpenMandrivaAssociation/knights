@@ -3,7 +3,7 @@
 Summary:	Chess game
 Name:		plasma6-knights
 Version:	24.01.90
-Release:	2
+Release:	
 Group:		Games/Boards
 License:	GPL
 URL:		https://invent.kde.org/games/knights
@@ -16,6 +16,7 @@ Requires:	gnuchess
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6)
 BuildRequires:	cmake(Qt6Core)
+BuildRequires:	cmake(Qt6Core5Compat)
 BuildRequires:	cmake(Qt6Concurrent)
 BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6QmlModels)
@@ -37,6 +38,7 @@ BuildRequires:	cmake(KDEGames6)
 BuildRequires:	cmake(Freetype)
 BuildRequires:	cmake(Fontconfig)
 BuildRequires:	ninja
+BuildRequires:	7zip
 
 %description
 Knights is KDE's chess frontend.
