@@ -21,6 +21,8 @@ BuildRequires:	cmake(Qt6Concurrent)
 BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6QmlModels)
 BuildRequires:	cmake(Qt6Qml)
+BuildRequires:  cmake(Qt6QmlCore)
+BuildRequires:  cmake(Qt6QmlNetwork)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6Quick)
 BuildRequires:	cmake(Qt6TextToSpeech)
@@ -30,6 +32,7 @@ BuildRequires:	cmake(KF6Crash)
 BuildRequires:	cmake(KF6TextWidgets)
 BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KF6KIO)
+BuildRequires:	cmake(KF6Svg)
 BuildRequires:	cmake(KF6Plotting)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6Wallet)
@@ -37,6 +40,9 @@ BuildRequires:	cmake(PlasmaQuick)
 BuildRequires:	cmake(KDEGames6)
 BuildRequires:	cmake(Freetype)
 BuildRequires:	cmake(Fontconfig)
+BuildRequires:  qt6-qtbase-theme-gtk3
+BuildRequires:  qt6-qtmultimedia-gstreamer
+BuildRequires:  appstream
 BuildRequires:	ninja
 BuildRequires:	7zip
 
