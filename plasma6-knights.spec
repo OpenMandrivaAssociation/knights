@@ -2,7 +2,7 @@
 
 Summary:	Chess game
 Name:		plasma6-knights
-Version:	24.01.90
+Version:	24.01.95
 Release:	1
 Group:		Games/Boards
 License:	GPL
