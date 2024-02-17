@@ -1,16 +1,27 @@
+%define git 20240218
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:	Chess game
 Name:		plasma6-knights
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 Group:		Games/Boards
 License:	GPL
 URL:		https://invent.kde.org/games/knights
 %if 0%{?git:1}
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/games/knights/-/archive/%{gitbranch}/knights-%{gitbranchd}.tar.bz2#/knights-%{git}.tar.bz2
+%else
 Source0:        https://invent.kde.org/games/%{name}/-/archive/master/%{name}-master.tar.bz2
+%endif
+%else
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/games/knights/-/archive/%{gitbranch}/knights-%{gitbranchd}.tar.bz2#/knights-%{git}.tar.bz2
 %else
 Source0:        https://download.kde.org/%{stable}/release-service/%{version}/src/knights-%{version}.tar.xz
+%endif
 %endif
 Requires:	gnuchess
 BuildRequires:	cmake(ECM)
@@ -63,7 +74,7 @@ engines (XBoard and UIC)
 %{_datadir}/qlogging-categories6/knights.categories
 
 %prep
-%autosetup -p1 -n knights-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n knights-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
