@@ -5,8 +5,8 @@
 
 Summary:	Chess game
 Name:		plasma6-knights
-Version:	24.02.0
-Release:	%{?git:0.%{git}.}2
+Version:	24.02.1
+Release:	%{?git:0.%{git}.}1
 Group:		Games/Boards
 License:	GPL
 URL:		https://invent.kde.org/games/knights
