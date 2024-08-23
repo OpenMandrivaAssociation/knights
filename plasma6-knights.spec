@@ -5,7 +5,7 @@
 
 Summary:	Chess game
 Name:		plasma6-knights
-Version:	24.05.2
+Version:	24.08.0
 Release:	%{?git:0.%{git}.}1
 Group:		Games/Boards
 License:	GPL
@@ -72,6 +72,7 @@ engines (XBoard and UIC)
 %{_datadir}/knsrcfiles/knights.knsrc
 %{_datadir}/metainfo/org.kde.knights.appdata.xml
 %{_datadir}/qlogging-categories6/knights.categories
+%{_datadir}/qlogging-categories6/knights.renamecategories
 
 %prep
 %autosetup -p1 -n knights-%{?git:%{gitbranchd}}%{!?git:%{version}}
