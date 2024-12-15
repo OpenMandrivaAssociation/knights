@@ -5,7 +5,7 @@
 
 Summary:	Chess game
 Name:		plasma6-knights
-Version:	24.08.3
+Version:	24.12.0
 Release:	%{?git:0.%{git}.}1
 Group:		Games/Boards
 License:	GPL
