@@ -5,7 +5,7 @@
 
 Summary:	Chess game
 Name:		knights
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Group:		Games/Boards
 License:	GPL
@@ -57,6 +57,11 @@ BuildRequires:  appstream
 BuildRequires:	ninja
 BuildRequires:	7zip
 
+%rename plasma6-knights
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Knights is KDE's chess frontend.
 It supports playing local games against human players or against chess
@@ -73,17 +78,3 @@ engines (XBoard and UIC)
 %{_datadir}/metainfo/org.kde.knights.appdata.xml
 %{_datadir}/qlogging-categories6/knights.categories
 %{_datadir}/qlogging-categories6/knights.renamecategories
-
-%prep
-%autosetup -p1 -n knights-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-
-%find_lang knights --with-html
