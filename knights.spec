@@ -5,7 +5,7 @@
 
 Summary:	Chess game
 Name:		knights
-Version:	25.12.3
+Version:	26.04.0
 Release:	%{?git:0.%{git}.}1
 Group:		Games/Boards
 License:	GPL
